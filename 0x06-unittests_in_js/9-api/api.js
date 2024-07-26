@@ -7,8 +7,8 @@ app.get('/', (req, res) => {
   res.send('Welcome to the payment system');
 });
 
-app.get('/cart/:id', (req, res) => {
-  const id = parseInt(req.params.id, 10);
+app.get('/cart/:id(\\d+)', (req, res) => {
+  const id = req.params.id;
 
   if (isNaN(id)) {
     return res.status(404).send('Not found')
