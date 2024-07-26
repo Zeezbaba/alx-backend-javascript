@@ -15,7 +15,7 @@ describe('Index page', () => {
   it('returns correct response for valid id', (done) => {
     request.get(`${URL}/cart/12`, (_err, res, body) => {
       expect(res.statusCode).to.be.equal(200);
-      expect(body).to.be.equal('Payment methods for cart 12');
+      expect(body).to.be.equal('Payment methods for cart : 12');
       done();
     });
   });

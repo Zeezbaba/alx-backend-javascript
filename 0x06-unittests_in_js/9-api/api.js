@@ -10,9 +10,6 @@ app.get('/', (req, res) => {
 app.get('/cart/:id(\\d+)', (req, res) => {
   const id = req.params.id;
 
-  if (isNaN(id)) {
-    return res.status(404).send('Not found')
-  }
   res.send(`Payment methods for cart : ${id}`)
 })
 
